@@ -20,7 +20,7 @@ int main( void )
 
       switch ( choice ) { 
          case 1:
-            printf( "%s", "Enter a number: " );
+            printf( "%s", "Enter id and name: " );
             scanf( "%d", &id ); scanf(" %s", name);
             insert( &startPtr, id, name ); // insert id in list
             printList( startPtr );
