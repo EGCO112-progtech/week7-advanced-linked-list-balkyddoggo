@@ -165,3 +165,14 @@ void printListR ( LLPtr currentPtr )
       printf("%d %s -->NULL\n", currentPtr->id, currentPtr->name );
    }
 }
+
+
+void clearList(LLPtr *sPtr) {
+   LLPtr tempPtr;
+   while (*sPtr != NULL) {
+      tempPtr = *sPtr;
+      *sPtr = (*sPtr)->nextPtr;
+      free(tempPtr);
+   }
+   puts("All nodes cleared.");
+}

@@ -47,26 +47,6 @@ int main( void )
             } // end else
 
             break;
-         case 3:
-            if ( !isEmpty( startPtr ) ) { 
-               printf( "%s", "Enter number to be deleted: " );
-               scanf( "%d", &id );
-
-               // if character is found, remove it
-               if ( deletes( &startPtr, id ) ) { // remove id
-                  printf( "%d deleted.\n", id );
-                  printList( startPtr );
-                  printListR( startPtr );
-               } // end if
-               else {
-                  printf( "%d not found.\n\n", id );
-               } // end else
-            } // end if
-            else {
-               puts( "List is empty.\n" );
-            } // end else
-
-            break;
          default:
             puts( "Invalid choice.\n" );
             instructions();
@@ -77,5 +57,6 @@ int main( void )
       scanf( "%u", &choice );
    } // end while
   /* Clear all nodes at the end of nodes*/
+  clearList(&startPtr);
    puts( "End of run." );
 } // end main
