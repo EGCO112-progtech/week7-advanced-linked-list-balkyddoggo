@@ -151,7 +151,6 @@ void printListR ( LLPtr currentPtr )
    }
    else
    {
-      puts( "The reverse list is:" );
 
       while( currentPtr->nextPtr!=NULL)
          currentPtr=currentPtr->nextPtr;
