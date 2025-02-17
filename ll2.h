@@ -1,4 +1,4 @@
-
+#include <string.h>
 // self-referential structure
 struct Node {
    int id; // each listNode contains a character
